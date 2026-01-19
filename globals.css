@@ -1,0 +1,54 @@
+:root {
+    --color-bg-light: #ffffff;
+    --color-bg-dark: #1a1a1a;
+    --color-text-light: #000000;
+    --color-text-dark: #ffffff;
+    --color-primary: #0070f3;
+    --color-secondary: #6c757d;
+}
+
+data-theme='dark' {
+    --color-bg: var(--color-bg-dark);
+    --color-text: var(--color-text-dark);
+}
+
+data-theme='light' {
+    --color-bg: var(--color-bg-light);
+    --color-text: var(--color-text-light);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.utility-margin {
+    margin: 1rem;
+}
+
+.utility-padding {
+    padding: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
